@@ -14,14 +14,14 @@
                 targetUrl = decodeURIComponent(targetUrl);
                 
                 // Only allow 127.0.0.1 or localhost
-                if (targetUrl.includes('127.0.0.1') || targetUrl.includes('localhost')) {
-                    if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
+//                if (targetUrl.includes('127.0.0.1') || targetUrl.includes('localhost')) {
+//                    if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
                         targetUrl = 'http://' + targetUrl;
-                    }
+//                    }
                     window.location.href = targetUrl;
-                } else {
-                    document.body.innerHTML = '<h1 style="color:red;">Error: Only redirects to 127.0.0.1 or localhost are allowed</h1>';
-                }
+ //               } else {
+ //                   document.body.innerHTML = '<h1 style="color:red;">Error: Only redirects to 127.0.0.1 or localhost are allowed</h1>';
+  //              }
             } else {
                 document.body.innerHTML = '<h1 style="color:red;">Error: Missing "u" parameter</h1><p>Usage: ?u=http://127.0.0.1:3000</p>';
             }
